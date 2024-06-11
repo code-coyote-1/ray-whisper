@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ray-whisper-env"
+version = "0.1.0"
+description = ""
+authors = ["Evan <evan.m.anthony.ctr@socom.mil>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+faster-whisper = "^1.0.2"
+torch = "^2.3.1"
+torchvision = "^0.18.1"
+torchaudio = "^2.3.1"
+fastapi = "^0.111.0"
+ray = {extras = ["serve"], version = "^2.24.0"}
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
