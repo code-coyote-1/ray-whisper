@@ -63,9 +63,11 @@ headResources:
     limits:
       cpu: 6
       memory: 10Gi
+      nvidia.com/gpu: 1
     requests:
       cpu: 6
       memory: 6Gi
+      nvidia.com/gpu: 1
 
 resources:
   requests:
