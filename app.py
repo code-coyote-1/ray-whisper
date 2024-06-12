@@ -16,7 +16,7 @@ class Whisper:
     def __init__(self):
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.compute_type = "float16" if torch.cuda.is_available() else "float32"
-        self.model = WhisperModel('medium.en', device=self.device, compute_type=self.compute_type, local_files_only=True)
+        self.model = WhisperModel('medium.en', device=self.device, compute_type=self.compute_type, local_files_only=False)
         command = "python3 -c 'import os; import nvidia.cublas.lib; import nvidia.cudnn.lib; print(os.path.dirname(nvidia.cublas.lib.__file__) + \":\" + os.path.dirname(nvidia.cudnn.lib.__file__))'"
         result = subprocess.run(command, shell=True, capture_output=True, text=True)
         if result.returncode != 0:
